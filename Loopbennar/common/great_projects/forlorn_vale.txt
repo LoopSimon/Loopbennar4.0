@@ -137,7 +137,7 @@ ibevar_temple_of_munas = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15

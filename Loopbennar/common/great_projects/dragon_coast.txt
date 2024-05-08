@@ -81,6 +81,7 @@ nimscodd_academy = {
 			factor = 800
 		}
 		province_modifiers = {
+			local_development_cost = -0.15
 			local_institution_spread = 0.2
 		}
 		area_modifier = {
@@ -88,6 +89,7 @@ nimscodd_academy = {
 		country_modifiers = {
 			innovativeness_gain = 0.1
 			artificers_loyalty_modifier = 0.025
+			allowed_rajput_fraction = 0.025
 		}
 		on_upgraded = {
 			owner = {
@@ -103,15 +105,17 @@ nimscodd_academy = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2000
 		}
 		province_modifiers = {
+			local_development_cost = -0.25
 			local_institution_spread = 0.35
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			innovativeness_gain = 0.2
+			allowed_rajput_fraction = 0.05
 			artificers_loyalty_modifier = 0.05
 			artificers_influence_modifier = 0.025
 		}
@@ -129,21 +133,27 @@ nimscodd_academy = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
+			local_development_cost = -0.35
 			local_institution_spread = 0.5
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			innovativeness_gain = 0.33
+			allowed_rajput_fraction = 0.1
 			artificers_loyalty_modifier = 0.1
 			artificers_influence_modifier = 0.05
 		}
 		on_upgraded = {
 			center_of_trade = 1
 			owner = {
+				country_event = { 
+					id = cannorian_monuments_nimscodd_artificers.1
+					days = 1
+				}
 				add_estate_loyalty = {
 					estate = estate_artificers
 					loyalty = 15
@@ -233,6 +243,7 @@ portnamm_portroy_merchants_guild = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			trade_efficiency = 0.025
 			burghers_loyalty_modifier = 0.025
 		}
 		on_upgraded = {
@@ -254,10 +265,12 @@ portnamm_portroy_merchants_guild = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			trade_efficiency = 0.05
 			burghers_loyalty_modifier = 0.05
 			burghers_influence_modifier = 0.025
 		}
 		on_upgraded = {
+			add_mercantilism = 5
 			define_advisor = {
 				type = trader
 				skill = 3
@@ -273,7 +286,7 @@ portnamm_portroy_merchants_guild = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 4000
 		}
 		province_modifiers = {
 			province_trade_power_value = 15
@@ -283,11 +296,13 @@ portnamm_portroy_merchants_guild = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			trade_efficiency = 0.1
 			burghers_loyalty_modifier = 0.1
 			burghers_influence_modifier = 0.05
+			merchants = 1
 		}
 		on_upgraded = {
-			add_mercantilism = 5
+			add_mercantilism = 10
 		}
 	}
 }
@@ -315,6 +330,7 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 				tooltip = cannorian_monuments_can_use_tooltip_kobildzex
 					OR = {
 						culture_group = kobold
+						culture = castanorian
 					}
 			}
 			province_is_or_accepts_culture = yes
@@ -326,12 +342,10 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 				tooltip = cannorian_monuments_can_use_tooltip_kobildzex
 					OR = {
 						culture_group = kobold
+						culture = castanorian
 					}
 			}
-			has_owners_culture = yes
-			owner = {
-			primary_culture = bluescale_kobold
-					}
+			province_is_or_accepts_culture = yes
 		}
 	}	
 	keep_trigger = {
@@ -361,6 +375,7 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 		}
 		province_modifiers = {
 			local_development_cost = -0.1
+			trade_goods_size = 0.5
 			trade_goods_size_modifier = 0.05
 		}
 		area_modifier = {
@@ -383,6 +398,7 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 		}
 		province_modifiers = {
 			local_development_cost = -0.2
+			trade_goods_size = 1
 			trade_goods_size_modifier = 0.1
 		}
 		area_modifier = {
@@ -404,10 +420,11 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.3
+			trade_goods_size = 1.5
 			trade_goods_size_modifier = 0.15
 		}
 		area_modifier = {
@@ -452,10 +469,7 @@ the_dragonhoard = {
 						culture = castanorian
 					}
 				}
-			has_owners_culture = yes
-			owner = {
-			primary_culture = bluescale_kobold
-			}
+			province_is_or_accepts_culture = yes
 		}
 	}	
 	can_upgrade_trigger = {
@@ -464,12 +478,10 @@ the_dragonhoard = {
 				tooltip = cannorian_monuments_can_use_tooltip_dragonhoard
 					OR = {
 						culture_group = kobold
+						culture = castanorian
 					}
 				}
-			has_owners_culture = yes
-			owner = {
-			primary_culture = bluescale_kobold
-			}
+			province_is_or_accepts_culture = yes
 		}
 	}	
 	keep_trigger = {
@@ -535,7 +547,7 @@ the_dragonhoard = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.3

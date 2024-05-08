@@ -137,7 +137,7 @@ nathalaire_city_of_pirates = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			province_trade_power_value = 15
@@ -150,6 +150,15 @@ nathalaire_city_of_pirates = {
 			spy_offence = 0.25
 			privateer_efficiency = 0.25
 			dip_advisor_cost = -0.25
+		}
+		on_upgraded = {
+			add_base_production = 2
+			owner = {
+				add_country_modifier = {
+					name = nathalaire_city_of_pirates_nathalynes_boon
+					duration = 10950
+				}
+			}
 		}
 	}
 }

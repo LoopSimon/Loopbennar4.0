@@ -91,6 +91,7 @@ sorncell_deepwater_harbor = {
 		}
 		country_modifiers = {
 			heavy_ship_cost = -0.05
+			heavy_ship_power = 0.025
 		}
 		on_upgraded = {
 		}
@@ -111,6 +112,8 @@ sorncell_deepwater_harbor = {
 		}
 		country_modifiers = {
 			heavy_ship_cost = -0.1
+			heavy_ship_power = 0.05
+			heavy_ship_hull_size_modifier = 0.05
 		}
 		on_upgraded = {
 			add_base_production = 2
@@ -122,7 +125,7 @@ sorncell_deepwater_harbor = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -133,6 +136,8 @@ sorncell_deepwater_harbor = {
 		}
 		country_modifiers = {
 			heavy_ship_cost = -0.15
+			heavy_ship_power = 0.1
+			heavy_ship_hull_size_modifier = 0.1
 		}
 		on_upgraded = {
 			add_base_production = 2

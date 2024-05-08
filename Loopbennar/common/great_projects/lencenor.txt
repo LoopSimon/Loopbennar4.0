@@ -71,7 +71,9 @@ lorentaine_mage_academy = {
 			factor = 1000
 		}
 		province_modifiers = {
+			local_development_cost = -0.05
 			local_defensiveness = 0.1
+			allowed_num_of_manufactories = 1
 		}
 		area_modifier = {
 		}
@@ -100,7 +102,9 @@ lorentaine_mage_academy = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_development_cost = -0.1
 			local_defensiveness = 0.2
+			allowed_num_of_manufactories = 1
 		}
 		area_modifier = {
 		}
@@ -130,17 +134,19 @@ lorentaine_mage_academy = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
-			local_development_cost = -0.1
+			local_development_cost = -0.15
 			local_defensiveness = 0.33
+			allowed_num_of_manufactories = 1
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			mages_influence_modifier = 0.05
 			mages_loyalty_modifier = 0.1
+			all_power_cost = -0.025
 		}
 		on_upgraded = {
 			owner = {
@@ -151,6 +157,152 @@ lorentaine_mage_academy = {
 				add_country_modifier = {
 					name = lorentaine_mage_academy_loyalty
 					duration = 7300
+				}
+				define_general = {
+					name = "Calissa Castanern"
+					trait = war_wizard_personality
+					fire = 2
+					shock = 8
+					manuever = 1
+					siege = 6
+					female = yes
+				}
+			}
+		}
+	}
+}
+#New Adea Naval School (Lorent)
+lorent_new_adea_naval_school = {
+	start = 82
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		development = 20
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = cannorian_monuments_can_use_tooltip_lencenor
+					OR = {
+						culture_group = lencori
+						culture = moon_elf
+						culture = castanorian
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		development = 20
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = cannorian_monuments_can_use_tooltip_lencenor
+					OR = {
+						culture_group = lencori
+						culture = moon_elf
+						culture = castanorian
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.05
+			local_sailors_modifier = 0.25
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			admiral_cost = -0.05
+			capture_ship_chance = 0.05
+		}
+		on_upgraded = {
+			add_base_production = 1
+			change_trade_goods = naval_supplies
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+			local_sailors_modifier = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			admiral_cost = -0.1
+			capture_ship_chance = 0.1
+		}
+		on_upgraded = {
+			add_base_production = 2
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.15
+			local_sailors_modifier = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			admiral_cost = -0.15
+			admiral_skill_gain_modifier = 0.01
+			capture_ship_chance = 0.15
+		}
+		on_upgraded = {
+			add_base_production = 3
+			center_of_trade = 1
+			owner = {
+				add_country_modifier = {
+					name = lorent_new_adea_naval_school_new_admiralty
+					duration = 3650
 				}
 			}
 		}
@@ -235,6 +387,7 @@ deranne_westport_gateway_to_aelantir = {
 		}
 		country_modifiers = {
 			range = 0.25
+			global_colonial_growth = 10
 		}
 		on_upgraded = {
 		}
@@ -256,7 +409,7 @@ deranne_westport_gateway_to_aelantir = {
 		}
 		country_modifiers = {
 			range = 0.5
-			global_colonial_growth = 10
+			global_colonial_growth = 20
 		}
 		on_upgraded = {
 			define_advisor = {
@@ -274,7 +427,7 @@ deranne_westport_gateway_to_aelantir = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -286,7 +439,7 @@ deranne_westport_gateway_to_aelantir = {
 		}
 		country_modifiers = {
 			range = 0.75
-			global_colonial_growth = 20
+			global_colonial_growth = 30
 		}
 		on_upgraded = {
 			owner = {
@@ -417,7 +570,7 @@ minara_temple = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15

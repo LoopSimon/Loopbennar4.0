@@ -24,10 +24,18 @@ giberd_academy_of_engineering = {
 			custom_trigger_tooltip = {
 				tooltip = cannorian_monuments_can_use_tooltip_empire_of_anbennar
 					OR = {
+						culture_group = anbennarian
+						culture = imperial_halfling
 						culture = imperial_gnome
+						culture = moon_elf
+						culture = silver_dwarf
+						culture = wexonard
+						culture = vertesker
+						culture = roilsardi
+						culture = castanorian
 					}
 			}
-			province_is_culture = yes
+			province_is_or_accepts_culture = yes
 		}
 	}	
 	can_upgrade_trigger = {
@@ -35,10 +43,18 @@ giberd_academy_of_engineering = {
 			custom_trigger_tooltip = {
 				tooltip = cannorian_monuments_can_use_tooltip_empire_of_anbennar
 					OR = {
+						culture_group = anbennarian
+						culture = imperial_halfling
 						culture = imperial_gnome
+						culture = moon_elf
+						culture = silver_dwarf
+						culture = wexonard
+						culture = vertesker
+						culture = roilsardi
+						culture = castanorian
 					}
 			}
-			province_is_culture = yes
+			province_is_or_accepts_culture = yes
 		}
 	}	
 	keep_trigger = {
@@ -115,7 +131,7 @@ giberd_academy_of_engineering = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			trade_goods_size = 1.5
@@ -231,6 +247,9 @@ telgeir_vanbury_steel_foundry = {
 		}
 		area_modifier = {
 		}
+		country_modifiers = {
+			infantry_fire = 0.05
+		}
 		on_upgraded = {
 			add_base_production = 2
 		}
@@ -249,6 +268,7 @@ telgeir_vanbury_steel_foundry = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			infantry_fire = 0.10
 			fire_damage_received = -0.025
 		}
 		on_upgraded = {
@@ -260,7 +280,7 @@ telgeir_vanbury_steel_foundry = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			trade_goods_size = 1
@@ -270,6 +290,7 @@ telgeir_vanbury_steel_foundry = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			infantry_fire = 0.15
 			fire_damage_received = -0.05
 		}
 		on_upgraded = {
@@ -408,7 +429,7 @@ temple_of_ryala = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -540,6 +561,7 @@ konwell_the_imperial_archives = {
 		country_modifiers = {
 			adm_advisor_cost = -0.15
 			adm_tech_cost_modifier = -0.05
+			idea_cost = -0.025
 		}
 		on_upgraded = {
 		}
@@ -549,7 +571,7 @@ konwell_the_imperial_archives = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_institution_spread = 0.5
@@ -559,8 +581,22 @@ konwell_the_imperial_archives = {
 		country_modifiers = {
 			adm_advisor_cost = -0.25
 			adm_tech_cost_modifier = -0.1
+			idea_cost = -0.05
 		}
 		on_upgraded = {
+			owner = {
+				random_list = {
+					65 = {
+						add_adm_power = 200
+					}
+					20 = {
+						increase_ruler_adm_effect = 1
+						}
+					15 = {
+						add_adm_tech = 1
+					}
+				}
+			}
 		}
 	}
 }
@@ -681,7 +717,7 @@ seinathil_institute_of_song = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_production_efficiency = 1

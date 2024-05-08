@@ -117,7 +117,7 @@ eborthil_toref_citadel = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
