@@ -22,7 +22,6 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 					AND = {
 						province_is_or_accepts_religion_group = {
 							religion_group = halessi
-							
 						}
 					}
 			}
@@ -68,6 +67,7 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 			local_defensiveness = 0.1
 		}
 		area_modifier = {
+			local_hostile_movement_speed = -0.33
 		}
 		country_modifiers = {
 			stability_cost_modifier = -0.1
@@ -88,6 +88,7 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 			local_defensiveness = 0.2
 		}
 		area_modifier = {
+			local_hostile_movement_speed = -0.5
 			local_hostile_attrition = 0.5
 		}
 		country_modifiers = {
@@ -105,12 +106,13 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
 		}
 		area_modifier = {
+			local_hostile_movement_speed = -0.66
 			local_hostile_attrition = 1
 		}
 		country_modifiers = {
@@ -119,6 +121,174 @@ jinquiu_heiyukcheng_the_black_jade_citadel = {
 			vampires_influence_modifier = 0.05
 			khelorvalshi_loyalty_modifier = 0.1
 			khelorvalshi_influence_modifier = 0.05
+			monarch_military_power = 1
+		}
+		on_upgraded = {
+			owner = {
+				country_event = { 
+					id = haless_and_aelantir_monuments_heiyukcheng.1
+					days = 1
+				}
+			}
+		}
+	}
+}
+#Huangpo Academy of War (Bianfang)
+bianfang_huangpo_academy_of_war = {
+	start = 4826
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_yanshen
+					OR = {
+						culture_group = yan
+						culture_group = harimari
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture = pezarangi_harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_yanshen
+					OR = {
+						culture_group = yan
+						culture_group = harimari
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture = pezarangi_harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.05
+			local_institution_spread = 0.1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			yearly_army_professionalism = 0.001
+			general_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_institution_spread = 0.2
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			yearly_army_professionalism = 0.003
+			general_cost = -0.1
+			free_land_leader_pool = 1
+		}
+		on_upgraded = {
+			owner = {
+				define_general = {
+					name = "Thu Zhao"
+					trait = hardy_warrior_personality
+					fire = 4
+					shock = 4
+					manuever = 10
+					siege = 2
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_institution_spread = 0.33
+			local_development_cost = -0.15
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			yearly_army_professionalism = 0.005
+			general_cost = -0.15
+			free_land_leader_pool = 2
+			leader_land_manuever = 1
+		}
+		on_upgraded = {
+			add_building = university
+			owner = {
+				random_list = {
+					50 = {
+						add_mil_power = 150
+					}
+					30 = {
+						change_ruler_stat = {
+							stat = mil
+							amount = 2
+						}
+					}
+					20 = {
+						add_mil_tech = 1
+					}
+				}
+			}
 		}
 	}
 }
@@ -210,6 +380,7 @@ the_zhanying_of_szicheng = {
 		region_modifier = {
 		}
 		country_modifiers = {
+			drill_gain_modifier = 0.1
 			infantry_cost = -0.05
 			land_forcelimit_modifier = 0.025
 		}
@@ -234,6 +405,7 @@ the_zhanying_of_szicheng = {
 		region_modifier = {
 		}
 		country_modifiers = {
+			drill_gain_modifier = 0.2
 			infantry_cost = -0.1
 			land_forcelimit_modifier = 0.05
 		}
@@ -254,7 +426,7 @@ the_zhanying_of_szicheng = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -267,10 +439,147 @@ the_zhanying_of_szicheng = {
 		region_modifier = {
 		}
 		country_modifiers = {
+			drill_gain_modifier = 0.33
 			infantry_cost = -0.15
 			land_forcelimit_modifier = 0.1
 		}
 		on_upgraded = {
+		}
+	}
+}
+#The Cheng of Guhe (Guhe)
+guhe_the_cheng_of_guhe = {
+	start = 4950
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_guhe
+					OR = {
+						culture_group = yan
+						culture_group = harimari
+						culture = goldscale_kobold
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture = pezarangi_harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_guhe
+					OR = {
+						culture_group = yan
+						culture_group = harimari
+						culture = goldscale_kobold
+						culture_group = hobgoblin
+						culture_group = wuhyun
+						culture = goldscale_kobold
+						culture = pezarangi_harpy
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			spy_offence = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.2
+			local_hostile_attrition = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			spy_offence = 0.15
+			reelection_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.33
+			local_hostile_attrition = 1
+			allowed_num_of_manufactories = 1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			spy_offence = 0.2
+			reelection_cost = -0.1
+		}
+		on_upgraded = {
+			change_trade_goods = precursor_relics
+			set_province_flag = permanent_precursor_relics
+			add_permanent_province_modifier = {
+				name = guhe_discovery_of_precursor_relics
+				duration = -1
+			}
 		}
 	}
 }
@@ -405,7 +714,7 @@ bianfang_vermillion_gate = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33

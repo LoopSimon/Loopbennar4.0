@@ -90,7 +90,7 @@ tuwad_dhumakon_gardens = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 		}
@@ -112,7 +112,7 @@ tuwad_dhumakon_gardens = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 		}
@@ -214,7 +214,7 @@ gronstunad_trade_halls = {
 		area_modifier = {			
 		}
 		country_modifiers = {
-			trade_efficiency = 0.025
+			trade_efficiency = 0.05
 		}
 		on_upgraded = {
 			owner = {
@@ -230,7 +230,7 @@ gronstunad_trade_halls = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			province_trade_power_value = 5
@@ -240,7 +240,7 @@ gronstunad_trade_halls = {
 			allowed_num_of_buildings = 1
 		}
 		country_modifiers = {
-			trade_efficiency = 0.05
+			trade_efficiency = 0.075
 			merchants = 1
 		}
 		on_upgraded = {
@@ -265,7 +265,7 @@ gronstunad_trade_halls = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			province_trade_power_value = 10
@@ -277,7 +277,7 @@ gronstunad_trade_halls = {
 			allowed_num_of_buildings = 1
 		}
 		country_modifiers = {
-			trade_efficiency = 0.10
+			trade_efficiency = 0.1
 			merchants = 1
 		}
 		on_upgraded = {
@@ -382,7 +382,7 @@ verkal_dromak_mage_academy = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -418,7 +418,7 @@ verkal_dromak_mage_academy = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -432,6 +432,21 @@ verkal_dromak_mage_academy = {
 			mages_influence_modifier = 0.05
 			mages_loyalty_modifier = 0.1
 			monarch_lifespan = 0.25
+		}
+		on_upgraded = {
+			add_permanent_province_modifier = {
+				name = verkal_dromak_mage_academy_mages_summon_large_damestear_meteor
+				duration = -1
+			}
+			change_trade_goods = damestear
+			set_province_flag = permanent_damestear
+			custom_tooltip = dwarven_monuments_permanent_damestear
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_mages
+					loyalty = 15
+				}
+			}
 		}
 	}
 }
@@ -511,7 +526,7 @@ vurdriz_andriz_bastion = {
 		}
 		country_modifiers = {
 			global_garrison_growth = 0.1
-			garrison_damage = 0.05
+			garrison_damage = 0.1
 			rival_border_fort_maintenance = -0.25
 		}
 		on_upgraded = {
@@ -523,7 +538,7 @@ vurdriz_andriz_bastion = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -533,7 +548,7 @@ vurdriz_andriz_bastion = {
 		country_modifiers = {
 			defensiveness = 0.05
 			global_garrison_growth = 0.2
-			garrison_damage = 0.1
+			garrison_damage = 0.2
 			rival_border_fort_maintenance = -0.5
 		}
 		on_upgraded = {
@@ -545,7 +560,7 @@ vurdriz_andriz_bastion = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.5
@@ -555,7 +570,7 @@ vurdriz_andriz_bastion = {
 		country_modifiers = {
 			defensiveness = 0.1
 			global_garrison_growth = 0.33
-			garrison_damage = 0.2
+			garrison_damage = 0.33
 			rival_border_fort_maintenance = -0.9
 		}
 		on_upgraded = {

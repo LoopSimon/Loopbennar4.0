@@ -77,6 +77,9 @@ gor_burad_fireglass_forge = {
 		}
 		area_modifier = {		
 		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.025
+		}
 		on_upgraded = {
 			if = {
 				limit = {
@@ -98,7 +101,7 @@ gor_burad_fireglass_forge = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			trade_goods_size = 2
@@ -106,6 +109,9 @@ gor_burad_fireglass_forge = {
 		}
 		area_modifier = {	
 			allowed_num_of_buildings = 1
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.05		
 		}
 		on_upgraded = {
 			add_base_production = 4
@@ -116,7 +122,7 @@ gor_burad_fireglass_forge = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			trade_goods_size = 3
@@ -126,6 +132,9 @@ gor_burad_fireglass_forge = {
 		}
 		region_modifier = {
 			allowed_num_of_buildings = 1
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.1
 		}
 		on_upgraded = {
 			add_base_production = 6
@@ -218,7 +227,7 @@ verkal_skomdihr_warding_gate = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -228,6 +237,7 @@ verkal_skomdihr_warding_gate = {
 		}
 		country_modifiers = {
 			infantry_fire = 0.1
+			max_general_fire = 1
 		}
 		on_upgraded = {
 		}
@@ -237,7 +247,7 @@ verkal_skomdihr_warding_gate = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.5
@@ -248,6 +258,8 @@ verkal_skomdihr_warding_gate = {
 		}
 		country_modifiers = {
 			infantry_fire = 0.15
+			max_general_fire = 1
+			leader_land_fire = 1
 		}
 		on_upgraded = {
 			owner = {
@@ -355,7 +367,7 @@ ovdal_lodhum_tunnel_of_love = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2000
 		}
 		province_modifiers = {
 		}
@@ -378,7 +390,7 @@ ovdal_lodhum_tunnel_of_love = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 4000
 		}
 		province_modifiers = {
 		}
@@ -475,7 +487,7 @@ arg_ordstun_great_clast_shafts = {
 		}
 		country_modifiers = {
 			production_efficiency = 0.025
-			development_cost_in_primary_culture = -0.01
+			development_cost_in_primary_culture = -0.025
 		}
 		on_upgraded = {
 		}
@@ -485,7 +497,7 @@ arg_ordstun_great_clast_shafts = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_development_cost = -0.05
@@ -497,7 +509,7 @@ arg_ordstun_great_clast_shafts = {
 		}
 		country_modifiers = {
 			production_efficiency = 0.05
-			development_cost_in_primary_culture = -0.025
+			development_cost_in_primary_culture = -0.05
 		}
 		on_upgraded = {
 			define_advisor = {
@@ -515,7 +527,7 @@ arg_ordstun_great_clast_shafts = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_development_cost = -0.1
@@ -524,11 +536,11 @@ arg_ordstun_great_clast_shafts = {
 		area_modifier = {		
 		}
 		region_modifier = {
-			local_development_cost = -0.06
+			local_development_cost = -0.15
 		}
 		country_modifiers = {
 			production_efficiency = 0.1
-			development_cost_in_primary_culture = -0.05
+			development_cost_in_primary_culture = -0.1
 		}
 		on_upgraded = {
 			owner = {
@@ -627,7 +639,7 @@ orlghelovar_great_waterfall = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -655,7 +667,7 @@ orlghelovar_great_waterfall = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -667,6 +679,7 @@ orlghelovar_great_waterfall = {
 		country_modifiers = {
 			stability_cost_modifier = -0.2
 			dip_advisor_cost = -0.2
+			monarch_diplomatic_power = 1
 		}
 		on_upgraded = {
 			owner = {
@@ -775,7 +788,7 @@ shaztundihr_marble_gate = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -796,7 +809,7 @@ shaztundihr_marble_gate = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33

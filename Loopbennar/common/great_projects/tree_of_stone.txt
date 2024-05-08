@@ -227,7 +227,7 @@ ovdal_kanzad_cannon_foundry = {
 		}
 		country_modifiers = {
 			artillery_cost = -0.05
-			artillery_fire = 0.01
+			artillery_fire = 0.1
 		}
 		on_upgraded = {
 			add_center_of_trade_level = 1
@@ -238,7 +238,7 @@ ovdal_kanzad_cannon_foundry = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2000
 		}
 		province_modifiers = {
 			trade_goods_size = 1
@@ -249,14 +249,14 @@ ovdal_kanzad_cannon_foundry = {
 		}
 		country_modifiers = {
 			artillery_cost = -0.1
-			artillery_fire = 0.05
+			artillery_fire = 0.15
 		}
 		on_upgraded = {
 			owner = {
 				define_general = {
 					name = "Thorgrim 'The Cannon' Flamebeard"
 					trait = cannoneer_personality
-					fire = 6
+					fire = 10
 					shock = 4
 					manuever = 3
 					siege = 5
@@ -269,7 +269,7 @@ ovdal_kanzad_cannon_foundry = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 4000
 		}
 		province_modifiers = {
 			trade_goods_size = 1.5
@@ -282,7 +282,7 @@ ovdal_kanzad_cannon_foundry = {
 		}
 		country_modifiers = {
 			artillery_cost = -0.15
-			artillery_fire = 0.1
+			artillery_fire = 0.25
 			artillery_levels_available_vs_fort = 1
 		}
 		on_upgraded = {
@@ -385,7 +385,7 @@ grozumdhir_green_gate = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -407,7 +407,7 @@ grozumdhir_green_gate = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -521,7 +521,7 @@ ovdal_az_an_grand_lake_ballroom = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_autonomy = -0.05
@@ -546,7 +546,7 @@ ovdal_az_an_grand_lake_ballroom = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_autonomy = -0.1
@@ -663,7 +663,7 @@ hul_as_krakazol_breweries = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -677,6 +677,7 @@ hul_as_krakazol_breweries = {
 		}
 		country_modifiers = {
 			manpower_recovery_speed = 0.1
+			max_general_shock = 1
 		}
 		on_upgraded = {
 		}
@@ -686,7 +687,7 @@ hul_as_krakazol_breweries = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -701,6 +702,7 @@ hul_as_krakazol_breweries = {
 		}
 		country_modifiers = {
 			manpower_recovery_speed = 0.15
+			max_general_shock = 1
 			leader_land_shock = 1
 		}
 		on_upgraded = {

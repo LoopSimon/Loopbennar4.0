@@ -78,7 +78,12 @@ verkal_gulan_golden_delve = {
 		area_modifier = {			
 		}
 		country_modifiers = {
+			monthly_gold_inflation_modifier = -0.25
 			yearly_corruption = -0.05
+		}
+		on_upgraded = {
+			add_base_production = 2
+			add_center_of_trade_level = 1
 		}
 	}
 	tier_2 = {
@@ -86,7 +91,7 @@ verkal_gulan_golden_delve = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -96,7 +101,19 @@ verkal_gulan_golden_delve = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			monthly_gold_inflation_modifier = -0.5
 			yearly_corruption = -0.1
+		}
+		on_upgraded = {
+			add_base_production = 3
+			define_advisor = {
+				type = master_of_mint
+				skill = 3
+				culture = root
+				religion = root
+				location = 2914
+				cost_multiplier = 0.25
+			}
 		}
 	}
 	tier_3 = {
@@ -104,7 +121,7 @@ verkal_gulan_golden_delve = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 4000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -114,7 +131,11 @@ verkal_gulan_golden_delve = {
 		area_modifier = {		
 		}
 		country_modifiers = {
+			monthly_gold_inflation_modifier = -0.75
 			yearly_corruption = -0.15
+		}
+		on_upgraded = {
+			add_base_production = 4
 		}
 	}
 }
@@ -193,7 +214,7 @@ seghdihr_home_of_the_seg_band = {
 		area_modifier = {		
 		}
 		country_modifiers = {
-			vassal_forcelimit_bonus = 0.2
+			vassal_forcelimit_bonus = 0.5
 			liberty_desire_from_subject_development = -0.1
 		}
 		on_upgraded = {
@@ -205,7 +226,7 @@ seghdihr_home_of_the_seg_band = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 1000
+			factor = 2000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -215,7 +236,7 @@ seghdihr_home_of_the_seg_band = {
 		}
 		country_modifiers = {
 			fire_damage_received = -0.025
-			vassal_forcelimit_bonus = 0.8
+			vassal_forcelimit_bonus = 1
 			liberty_desire_from_subject_development = -0.2
 		}
 		on_upgraded = {
@@ -226,7 +247,7 @@ seghdihr_home_of_the_seg_band = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 4000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -237,7 +258,7 @@ seghdihr_home_of_the_seg_band = {
 		}
 		country_modifiers = {
 			fire_damage_received = -0.05
-			vassal_forcelimit_bonus = 1
+			vassal_forcelimit_bonus = 1.5
 			liberty_desire_from_subject_development = -0.3
 		}
 		on_upgraded = {
@@ -337,7 +358,7 @@ hehodovar_school_of_architecture = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 		}
@@ -357,7 +378,7 @@ hehodovar_school_of_architecture = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 		}
@@ -463,7 +484,7 @@ gor_vazumbrog_the_vaulthold = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			trade_value_modifier = 0.1
@@ -484,7 +505,7 @@ gor_vazumbrog_the_vaulthold = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			trade_value_modifier = 0.15
@@ -496,6 +517,16 @@ gor_vazumbrog_the_vaulthold = {
 			allowed_rajput_fraction = 0.1
 			artificers_influence_modifier = 0.05
 			artificers_loyalty_modifier = 0.1
+		}
+		on_upgraded = {
+			change_trade_goods = precursor_relics
+			set_province_flag = permanent_precursor_relics
+			owner = {
+				country_event = { 
+					id = dwarven_monuments_vaulthold.1
+					days = 1
+				}
+			}
 		} 
 	}
 }
@@ -589,7 +620,7 @@ gor_ozumbrog_the_topaz_throne = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 		}
@@ -612,7 +643,7 @@ gor_ozumbrog_the_topaz_throne = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 		}

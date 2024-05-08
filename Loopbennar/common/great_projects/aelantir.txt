@@ -1,6 +1,106 @@
 ########################################
 #Ynn
 ########################################
+#Aelantaris
+atlantis = {
+	start = 1083
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_culture = yes
+		culture_group = elven
+	}	
+	can_upgrade_trigger = {
+		province_is_or_accepts_culture = yes
+		culture_group = elven
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {		
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			administrative_efficiency = 0.025
+			naval_forcelimit_modifier = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			administrative_efficiency = 0.025
+			naval_forcelimit_modifier = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			administrative_efficiency = 0.05
+			naval_forcelimit_modifier = 0.15
+			free_policy = 1
+		}
+		on_upgraded = {
+		}
+	}
+}
 #Malacnar, City of Warriors
 malacnar_city_of_warriors = {
 	start = 1169
@@ -78,6 +178,7 @@ malacnar_city_of_warriors = {
 		}
 		country_modifiers = {
 			army_tradition_from_battle = 0.25
+			drill_decay_modifier = -0.1
 		}
 		on_upgraded = {
 			add_base_manpower = 1
@@ -99,6 +200,7 @@ malacnar_city_of_warriors = {
 		}
 		country_modifiers = {
 			army_tradition_from_battle = 0.5
+			drill_decay_modifier = -0.2
 			infantry_power = 0.025
 		}
 		on_upgraded = {
@@ -118,7 +220,7 @@ malacnar_city_of_warriors = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -129,6 +231,7 @@ malacnar_city_of_warriors = {
 		}
 		country_modifiers = {
 			army_tradition_from_battle = 0.75
+			drill_decay_modifier = -0.33
 			infantry_power = 0.05
 		}
 		on_upgraded = {
@@ -247,7 +350,7 @@ vels_bacar_scol_mecynn = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -380,7 +483,7 @@ grebniesth_hedge_gardens = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -512,7 +615,7 @@ orenkoraim_nakar_koraim = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.2
@@ -533,6 +636,136 @@ orenkoraim_nakar_koraim = {
 ####################
 #Eordand
 ####################
+#Gift of Spring
+gift_of_spring = {
+	start = 2007
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			owner = { culture_group = eordan_ruinborn_elf }
+				OR = { 
+					owner = { dominant_religion = eordellon }
+					owner = { dominant_religion = spring_court }
+					owner = { 
+						custom_trigger_tooltip = {
+							tooltip = TOLERANCE_NEEDED
+							spring_court = 2
+							summer_court = 2
+							autumn_court = 2
+							winter_court = 2 
+						}
+					}
+				}
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			owner = { culture_group = eordan_ruinborn_elf }
+				OR = { 
+					owner = { dominant_religion = eordellon }
+					owner = { dominant_religion = spring_court }
+					owner = { 
+						custom_trigger_tooltip = {
+							tooltip = TOLERANCE_NEEDED
+							spring_court = 2
+							summer_court = 2
+							autumn_court = 2
+							winter_court = 2 
+						}
+					}
+				}
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			reinforce_cost_modifier = -0.1
+			global_manpower_modifier = 0.1
+			development_cost = -0.05
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			reinforce_cost_modifier = -0.2
+			global_manpower_modifier = 0.15
+			development_cost = -0.1
+		}
+		on_upgraded = {
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			reinforce_cost_modifier = -0.33
+			global_manpower_modifier = 0.2
+			development_cost = -0.15
+		}
+		on_upgraded = {
+		}
+	}
+}
 #Gift of Summer
 gift_of_summer = {
 	start = 2037
@@ -646,7 +879,7 @@ gift_of_summer = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 		}
@@ -746,6 +979,7 @@ gift_of_autumn = {
 		country_modifiers = {
 			culture_conversion_cost = -0.1
 			global_autonomy = -0.01
+			technology_cost = -0.025
 		}
 		on_upgraded = {
 		}
@@ -774,7 +1008,7 @@ gift_of_autumn = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 		}
@@ -783,7 +1017,7 @@ gift_of_autumn = {
 		country_modifiers = {
 			culture_conversion_cost = -0.25
 			global_autonomy = -0.05
-			technology_cost = -0.07
+			technology_cost = -0.1
 		}
 		on_upgraded = {
 		}
@@ -904,7 +1138,7 @@ gift_of_winter = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 		}

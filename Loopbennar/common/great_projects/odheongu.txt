@@ -117,7 +117,7 @@ daengun_hajigaja_library = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_institution_spread = 0.33

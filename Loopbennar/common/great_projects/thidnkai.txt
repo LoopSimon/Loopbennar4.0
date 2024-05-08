@@ -83,6 +83,9 @@ azkare_citadel_of_the_dawn = {
 		}
 		area_modifier = {
 		}
+		country_modifiers = {
+			trade_steering = 0.075
+		}
 		on_upgraded = {
 		}
 	}
@@ -101,6 +104,7 @@ azkare_citadel_of_the_dawn = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			trade_steering = 0.15
 			num_accepted_cultures = 1
 		}
 		on_upgraded = {
@@ -111,7 +115,7 @@ azkare_citadel_of_the_dawn = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -121,6 +125,7 @@ azkare_citadel_of_the_dawn = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			trade_steering = 0.25
 			num_accepted_cultures = 2
 			merchants = 1
 		}
@@ -209,6 +214,7 @@ kudet_kai_danon_dungcam_mercenary_guild = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			mercenary_manpower = 0.1
 			adventurers_loyalty_modifier = 0.025
 		}
 		on_upgraded = {
@@ -234,6 +240,7 @@ kudet_kai_danon_dungcam_mercenary_guild = {
 		area_modifier = {
 		}
 		country_modifiers = {
+			mercenary_manpower = 0.15
 			adventurers_loyalty_modifier = 0.05
 			adventurers_influence_modifier = 0.025
 		}
@@ -251,7 +258,7 @@ kudet_kai_danon_dungcam_mercenary_guild = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -261,7 +268,8 @@ kudet_kai_danon_dungcam_mercenary_guild = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			mercenary_manpower = 0.1
+			mercenary_manpower = 0.2
+			mercenary_discipline = 0.025
 			adventurers_loyalty_modifier = 0.1
 			adventurers_influence_modifier = 0.05
 		}
@@ -420,7 +428,7 @@ chien_binhrung_nha_nuhoanha_temple = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_development_cost = -0.15

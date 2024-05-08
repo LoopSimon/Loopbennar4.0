@@ -101,7 +101,7 @@ warded_city_deg = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -220,7 +220,7 @@ warded_city_orm = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -340,7 +340,7 @@ warded_city_khe = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -460,7 +460,7 @@ warded_city_lok = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -579,7 +579,7 @@ warded_city_okt = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -699,7 +699,7 @@ warded_city_arp = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 9000
+			factor = 5000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.25

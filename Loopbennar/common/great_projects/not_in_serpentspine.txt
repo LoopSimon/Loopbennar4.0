@@ -78,6 +78,7 @@ rubyhold_academy = {
 		}
 		country_modifiers = {
 			spy_offence = 0.15
+			idea_cost = -0.05
 		}
 		on_upgraded = {
 			add_human_minority_size_effect = yes
@@ -89,7 +90,7 @@ rubyhold_academy = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 		}
@@ -99,7 +100,7 @@ rubyhold_academy = {
 		}
 		country_modifiers = {
 			spy_offence = 0.20
-			idea_cost = -0.05
+			idea_cost = -0.075
 		}
 		on_upgraded = {
 			add_human_minority_size_effect = yes
@@ -111,17 +112,22 @@ rubyhold_academy = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 		}
 		area_modifier = {
 			local_defensiveness = 0.33
 			local_hostile_attrition = 2
+			local_defender_dice_roll_bonus = 1
 		}
 		country_modifiers = {
 			spy_offence = 0.25
-			idea_cost = -0.075
+			idea_cost = -0.1
+		}
+		on_upgraded = {
+			center_of_trade = 1
+			add_building = university
 		}
 	}
 }
@@ -212,7 +218,7 @@ ovdal_tungr_port_hold = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 		local_defensiveness = 0.2
@@ -244,7 +250,7 @@ ovdal_tungr_port_hold = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 		local_defensiveness = 0.33
@@ -265,6 +271,170 @@ ovdal_tungr_port_hold = {
 					name = ovdal_tungr_port_hold_ship_durability
 					duration = 5475
 				}
+			}
+		}
+	}
+}
+#Marrhold, Gate to the Serpentspine
+marrhold_gate_to_the_serpentspine = {
+	start = 4097
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {
+		
+	}
+	on_destroyed = {		
+	}	
+	can_use_modifiers_trigger = {
+		AND = {
+				custom_trigger_tooltip = {
+					tooltip = dwarven_monuments_can_use_tooltip_marrhold
+						OR = {
+							culture = marrodic 
+							culture = newfoot_halfling
+							culture_group = escanni
+							culture_group = dostanorian_g
+							culture_group = dwarven
+							culture_group = goblin
+							culture_group = kobold
+							culture_group = orcish
+							culture = moon_elf
+							culture = newfoot_halfling
+						}
+				}
+				province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+				custom_trigger_tooltip = {
+					tooltip = dwarven_monuments_can_use_tooltip_marrhold
+						OR = {
+							culture = marrodic 
+							culture = newfoot_halfling
+							culture_group = escanni
+							culture_group = dostanorian_g
+							culture_group = dwarven
+							culture_group = goblin
+							culture_group = kobold
+							culture_group = orcish
+						}
+				}
+				province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.1
+		}
+		country_modifiers = {
+			mil_advisor_cost = -0.1
+			army_tradition_from_battle = 0.5
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 3500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_hostile_attrition = 0.5
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.2
+		}
+		country_modifiers = {
+			mil_advisor_cost = -0.15
+			army_tradition_from_battle = 0.75
+		}
+		on_upgraded = {
+			define_advisor = {
+				type = commandant
+				name = "Erwin Smith"
+				skill = 3
+				culture = root
+				religion = root
+				location = 4097
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 7000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.33
+			local_hostile_attrition = 1
+			local_defender_dice_roll_bonus = 1
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.33
+		}
+		country_modifiers = {
+			mil_advisor_cost = -0.2
+			army_tradition_from_battle = 1
+		}
+		on_upgraded = {
+			center_of_trade = 1
+			owner = {
+				define_general = {
+					name = "Eren Jeager"
+					trait = goal_oriented_personality
+					fire = 2
+					shock = 8
+					manuever = 5
+					siege = 2
+				}
+				add_country_modifier = {
+					name = marrhold_tatake_tatake
+					duration = 7300
+				}	
 			}
 		}
 	}
@@ -340,6 +510,7 @@ verkal_ozovar_phokhao_citadel = {
 		}
 		province_modifiers = {
 			local_defensiveness = 0.1
+			trade_goods_size = 1
 		}
 		area_modifier = {		
 		}
@@ -356,11 +527,12 @@ verkal_ozovar_phokhao_citadel = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
 			local_hostile_attrition = 0.5
+			trade_goods_size = 2
 		}
 		area_modifier = {	
 		}
@@ -385,12 +557,13 @@ verkal_ozovar_phokhao_citadel = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
 			local_hostile_attrition = 1
 			local_defender_dice_roll_bonus = 1
+			trade_goods_size = 3
 		}
 		area_modifier = {		
 		}
@@ -520,7 +693,7 @@ silverforge_strongbellow_academy = {
 			months = 240
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 3500
 		}
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -545,7 +718,7 @@ silverforge_strongbellow_academy = {
 			months = 480
 		}
 		cost_to_upgrade = {
-			factor = 2500
+			factor = 7000
 		}
 		province_modifiers = {
 			local_defensiveness = 0.33
