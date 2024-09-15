@@ -94,12 +94,6 @@ H74_intro_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-				}
-				4284 = { has_state_edict = edict_encourage_development } #Ovdal-az-An
-			}
 			treasury = 150
 		}
 
