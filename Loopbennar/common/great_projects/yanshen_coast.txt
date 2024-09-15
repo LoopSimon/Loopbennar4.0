@@ -8,7 +8,7 @@ tianlou_jewel_of_yanshen = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 2
+	starting_tier = 0
 	type = monument
 	build_trigger = {	
 	}
@@ -74,14 +74,12 @@ tianlou_jewel_of_yanshen = {
 			factor = 1000
 		}
 		province_modifiers = {
-			local_development_cost = -0.05
 			province_trade_power_modifier = 0.1
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			prestige = 0.1
-			trade_efficiency = 0.025
 		}
 		on_upgraded = {
 		}
@@ -94,14 +92,13 @@ tianlou_jewel_of_yanshen = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_development_cost = -0.1
+			local_development_cost = -0.05
 			province_trade_power_modifier = 0.2
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			prestige = 0.25
-			trade_efficiency = 0.05
 		}
 		on_upgraded = {
 		}
@@ -114,14 +111,13 @@ tianlou_jewel_of_yanshen = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_development_cost = -0.15
+			local_development_cost = -0.10
 			province_trade_power_modifier = 0.33
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
 			prestige = 0.5
-			trade_efficiency = 0.1
 			merchants = 1
 		}
 		on_upgraded = {
@@ -209,7 +205,6 @@ tianlou_xuezhefang_eunuch_academy = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			governing_capacity = 25
 			expand_administration_cost = -0.1
 			eunuchs_anb_loyalty_modifier = 0.025
 		}
@@ -235,7 +230,6 @@ tianlou_xuezhefang_eunuch_academy = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			governing_capacity = 50
 			expand_administration_cost = -0.3
 			eunuchs_anb_loyalty_modifier = 0.05
 			eunuchs_anb_influence_modifier = 0.025
@@ -266,34 +260,13 @@ tianlou_xuezhefang_eunuch_academy = {
 		}
 		province_modifiers = {
 			allowed_num_of_buildings = 1
-			local_unrest = -5
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			governing_capacity = 100
 			expand_administration_cost = -0.5
 			eunuchs_anb_loyalty_modifier = 0.1
 			eunuchs_anb_influence_modifier = 0.05
-		}
-		on_upgraded = {
-			owner = {
-				add_estate_loyalty = {
-					estate = estate_eunuchs_anb
-					loyalty = 15
-				}
-				random_list = {
-					65 = {
-						add_adm_power = 200
-					}
-					20 = {
-						increase_ruler_adm_effect = 1
-						}
-					15 = {
-						add_adm_tech = 1
-					}
-				}
-			}
 		}
 	}
 }
@@ -589,16 +562,6 @@ luoyip_house_of_fire_and_water = {
 		country_modifiers = {
 			siege_ability = 0.1
 			allowed_rajput_fraction = 0.1
-		}
-		on_upgraded = {
-			center_of_trade = 1
-			owner = { 
-				change_innovativeness = 3
-				country_event = { 
-					id = halessi_monuments_house_of_fire_and_water_artificers.1
-					days = 1
-				}
-			}
 		}
 	}
 }

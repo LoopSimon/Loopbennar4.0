@@ -1885,6 +1885,17 @@ bim_lau_necropolis = {
 
 		on_upgraded = {
 			custom_tooltip = bim_lau_spirit_update_monument_tt
+			change_religion = mystic_accord
+			country_modifiers = {
+			missionaries = 1
+			global_missionary_strength = 0.02
+			}
+			owner = {
+				country_event = { 
+					id = loop.1
+					days = 1
+				}
+			}
 			hidden_effect = {
 				4565 = {
 					change_variable = {

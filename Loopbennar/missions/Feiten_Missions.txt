@@ -529,11 +529,11 @@ feiten_missions_1_world = {
 						}
 						total_development = 150
 						NOT = { liberty_desire = 25 }
-					}
-					capital_scope = {
-						OR = {
-							continent = south_america
-							continent = north_america
+						capital_scope = {
+							OR = {
+								continent = south_america
+								continent = north_america
+							}
 						}
 					}
 				}
@@ -3442,7 +3442,7 @@ feiten_missions_4_world = {
 					AND = {
 						num_of_heavy_ship = 30
 						variable_arithmetic_trigger = {
-							export_to_variable = { which = heavyCount value = 0 }
+							export_to_variable = { which = heavyCount value = trigger_value:always }
 							northern_sea_region = {
 								type = all
 								if = {
@@ -3459,11 +3459,11 @@ feiten_missions_4_world = {
 					AND = {
 						num_of_light_ship = 30
 						variable_arithmetic_trigger = {
-							export_to_variable = { which = lightShipCount value = 0 }
+							export_to_variable = { which = lightShipCount value = trigger_value:always }
 							northern_sea_region = {
 								type = all
 								if = {
-									limit = { galleys_in_province = ROOT }
+									limit = { light_ships_in_province = ROOT }
 									variable_arithmetic_trigger = {
 										export_to_variable = { which = temp value = trigger_value:light_ships_in_province }
 										change_variable = { which = lightShipCount which = temp }

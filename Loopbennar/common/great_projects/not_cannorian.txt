@@ -1,145 +1,6 @@
 ####################
 #Not Cannorian
 ####################
-#Pyramids of Khet
-pyramids_of_khet = {
-	start = 475
-	date = 01.01.01
-	time = {
-		months = 0
-	}
-	build_cost = 0
-	can_be_moved = no
-	move_days_per_unit_distance = 1
-	starting_tier = 2
-	type = monument
-	build_trigger = {	
-	}
-	on_built = {		
-	}
-	on_destroyed = {	
-	}
-	can_use_modifiers_trigger = {
-		AND = {
-			custom_trigger_tooltip = {
-				tooltip = cannorian_monuments_can_use_tooltip_north_salahad
-					OR = {
-						culture_group = kheteratan
-						culture_group = akasi
-						culture_group = gnollish
-						culture = delta_gnome
-						culture = sun_elf
-						culture = castanorian
-					}
-			}
-			province_is_or_accepts_culture = yes
-		}
-	}
-	can_upgrade_trigger = {
-		AND = {
-			custom_trigger_tooltip = {
-				tooltip = cannorian_monuments_can_use_tooltip_north_salahad
-					OR = {
-						culture_group = kheteratan
-						culture_group = akasi
-						culture_group = gnollish
-						culture = delta_gnome
-						culture = sun_elf
-						culture = castanorian
-					}
-			}
-			province_is_or_accepts_culture = yes
-		}
-	}	
-	keep_trigger = {
-	}
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {	
-		}
-		on_upgraded = {
-		}
-	}
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		region_modifier = {
-			local_production_efficiency = 0.1
-			local_monthly_devastation = -0.05
-			local_development_cost = -0.05
-		}
-		country_modifiers = {
-			imperial_mandate = 0.03
-		}
-		on_upgraded = {
-		}
-	}
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		region_modifier = {
-			local_production_efficiency = 0.2
-			local_monthly_devastation = -0.1
-			local_development_cost = -0.1
-		}
-		country_modifiers = {
-			imperial_mandate = 0.05
-			max_absolutism = 5
-		}
-		on_upgraded = {
-			add_center_of_trade_level = 1
-		}
-	}
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		region_modifier = {
-			local_production_efficiency = 0.33
-			local_monthly_devastation = -0.15
-			local_development_cost = -0.15
-		}
-		country_modifiers = {
-			imperial_mandate = 0.1
-			max_absolutism = 10
-			yearly_absolutism = 0.5
-		}
-		on_upgraded = {
-		}
-	}
-}
 #Grain Port of Koroshesh
 koroshesh_grain_port = {
 	start = 463
@@ -763,13 +624,11 @@ aquatbar_great_library = {
 			factor = 1000
 		}
 		province_modifiers = {
-			local_development_cost = -0.05
 			local_institution_spread = 0.1
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			advisor_cost = -0.025
 			innovativeness_gain = 0.1
 		}
 		on_upgraded = {
@@ -786,14 +645,13 @@ aquatbar_great_library = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_development_cost = -0.1
+			local_development_cost = -0.05
 			local_institution_spread = 0.2
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			advisor_cost = -0.05
-			innovativeness_gain = 0.2
+			innovativeness_gain = 0.1
 			technology_cost = -0.025
 		}
 		on_upgraded = {
@@ -810,14 +668,13 @@ aquatbar_great_library = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_development_cost = -0.15
+			local_development_cost = -0.1
 			local_institution_spread = 0.33
 		}
 		area_modifier = {
 		}
 		country_modifiers = {
-			advisor_cost = -0.1
-			innovativeness_gain = 0.33
+			innovativeness_gain = 0.2
 			technology_cost = -0.05
 		}
 		on_upgraded = {

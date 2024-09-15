@@ -123,7 +123,6 @@ draculas_throne = {
 		country_modifiers = {
 			yearly_absolutism = 1
 			max_absolutism = 10
-			possible_policy = 1
 		}
 		on_upgraded = {
 			custom_tooltip = tughayasa_better_divination_2_tt
@@ -228,7 +227,7 @@ hammerhome_artificers_guild = {
 		country_modifiers = {
 			artificers_loyalty_modifier = 0.025
 			allowed_rajput_fraction = 0.025
-			fire_damage_received = -0.025
+			fire_damage = 0.025
 		}
 		on_upgraded = {
 			if = {
@@ -265,18 +264,10 @@ hammerhome_artificers_guild = {
 			artificers_loyalty_modifier = 0.05
 			artificers_influence_modifier = 0.025
 			allowed_rajput_fraction = 0.05
-			fire_damage_received = -0.05
+			fire_damage = 0.05
 		}
 		on_upgraded = {
 			add_base_production = 3
-			define_advisor = {
-				type = natural_scientist
-				skill = 3
-				culture = root
-				religion = root
-				location = root
-				cost_multiplier = 0.25
-			}
 		}
 	}
 	tier_3 = {
@@ -298,17 +289,11 @@ hammerhome_artificers_guild = {
 			artificers_loyalty_modifier = 0.1
 			artificers_influence_modifier = 0.05
 			allowed_rajput_fraction = 0.1
-			fire_damage_received = -0.1
+			fire_damage = 0.075
 		}
 		on_upgraded = {
 			add_base_production = 4
 			center_of_trade = 1
-			owner = {
-				country_event = { 
-					id = cannorian_monuments_hammerhome_artificers.1
-					days = 1
-				}
-			}
 		}
 	}
 }

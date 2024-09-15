@@ -313,7 +313,6 @@ country_event = {
 		}
 		add_stability = -2
 
-		custom_tooltip = tooltip_remove_corin_personal_deity
 
 		custom_tooltip = crimson_deluge_start_tooltip
 		
@@ -493,6 +492,7 @@ country_event = {
 		trigger = {
 			OR = {
 				religion = dalcabba
+				religion = infernal_court
 				NOT = { religion_group = cannorian}
 			}
 		}
@@ -604,6 +604,7 @@ country_event = {
 		trigger = {
 			OR = {
 				religion = dalcabba
+				religion = infernal_court
 				NOT = { religion_group = cannorian }
 			}
 		}
@@ -694,7 +695,8 @@ province_event = {
 		name = "corinite.4.c"
 		trigger = {
 			OR = {
-				religion = dalcabba
+				owner = { religion = dalcabba }
+				owner = { religion = infernal_court }
 				NOT = { owner = { religion_group = cannorian } }
 			}
 		}

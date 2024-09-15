@@ -26,7 +26,6 @@ nimscodd_academy = {
 					OR = {
 					culture_group = gnomish
 					culture = reverian
-					culture_group = kobold
 					culture = castanorian
 					AND = {
 						religion = the_thought
@@ -44,7 +43,6 @@ nimscodd_academy = {
 					OR = {
 					culture_group = gnomish
 					culture = reverian
-					culture_group = kobold
 					culture = castanorian
 					AND = {
 						religion = the_thought
@@ -237,7 +235,6 @@ portnamm_portroy_merchants_guild = {
 		}
 		province_modifiers = {
 			province_trade_power_value = 5
-			trade_goods_size = 0.5
 			trade_goods_size_modifier = 0.05
 		}
 		area_modifier = {
@@ -259,7 +256,6 @@ portnamm_portroy_merchants_guild = {
 		}
 		province_modifiers = {
 			province_trade_power_value = 10
-			trade_goods_size = 1
 			trade_goods_size_modifier = 0.1
 		}
 		area_modifier = {
@@ -291,7 +287,7 @@ portnamm_portroy_merchants_guild = {
 		province_modifiers = {
 			province_trade_power_value = 15
 			trade_goods_size = 1.5
-			trade_goods_size_modifier = 0.15
+			trade_goods_size_modifier = 0.05
 		}
 		area_modifier = {
 		}
@@ -382,7 +378,6 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 		}
 		region_modifier = {
 			local_hostile_attrition = 0.5
-			local_defensiveness = 0.1
 		}
 		country_modifiers = {	
 		}
@@ -404,15 +399,10 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 		area_modifier = {
 		}
 		region_modifier = {
-			local_hostile_attrition = 1
-			local_defensiveness = 0.15
+			local_hostile_attrition = 0.5
+			local_defensiveness = 0.1
 		}
 		country_modifiers = {	
-		}
-		on_upgraded = {
-			owner = {
-				mission_reward_artifice_points_1 = yes
-			}
 		}
 	}
 	tier_3 = {
@@ -431,14 +421,9 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 		}
 		region_modifier = {
 			local_hostile_attrition = 2
-			local_defensiveness = 0.2
+			local_defensiveness = 0.1
 		}
 		country_modifiers = {	
-		}
-		on_upgraded = {
-			owner = (
-				mission_reward_artifice_points_2 = yes
-			}
 		}
 	}
 }

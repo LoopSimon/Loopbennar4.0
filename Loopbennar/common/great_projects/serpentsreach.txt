@@ -85,9 +85,6 @@ gor_burad_fireglass_forge = {
 				limit = {
 					AND = {
 						NOT = { trade_goods = glass }
-						NOT = { trade_goods = gold }
-						NOT = { trade_goods = mithril }
-						NOT = { trade_goods = damestear }
 						NOT = { trade_goods = precursor_relics }
 					}
 				}
@@ -129,9 +126,6 @@ gor_burad_fireglass_forge = {
 			trade_goods_size_modifier = 0.33
 		}
 		area_modifier = {		
-		}
-		region_modifier = {
-			allowed_num_of_buildings = 1
 		}
 		country_modifiers = {
 			global_trade_goods_size_modifier = 0.1
@@ -236,8 +230,7 @@ verkal_skomdihr_warding_gate = {
 		area_modifier = {		
 		}
 		country_modifiers = {
-			infantry_fire = 0.1
-			max_general_fire = 1
+			infantry_fire = 0.05
 		}
 		on_upgraded = {
 		}
@@ -252,23 +245,13 @@ verkal_skomdihr_warding_gate = {
 		province_modifiers = {
 			local_defensiveness = 0.5
 			local_hostile_attrition = 2
-			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = {		
 		}
 		country_modifiers = {
-			infantry_fire = 0.15
-			max_general_fire = 1
-			leader_land_fire = 1
+			infantry_fire = 0.1
 		}
-		on_upgraded = {
-			owner = {
-				add_country_modifier = {
-					name = verkal_skomdihr_warding_gate_extra_firepower
-					duration = 5475
-				}
-			}
-		}
+
 	}
 }
 #The Tunnel of Love (Ovdal Lodhum)
@@ -380,7 +363,6 @@ ovdal_lodhum_tunnel_of_love = {
 			auto_explore_adjacent_to_colony = yes
 			global_colonial_growth = 20
 			colonist_placement_chance = 0.05
-			colony_development_boost = 1
 		}
 		on_upgraded = {	
 		}
@@ -402,7 +384,6 @@ ovdal_lodhum_tunnel_of_love = {
 		country_modifiers = {
 			global_colonial_growth = 30
 			colonist_placement_chance = 0.1
-			colony_development_boost = 1
 		}
 		on_upgraded = {
 		}
@@ -534,9 +515,6 @@ arg_ordstun_great_clast_shafts = {
 			trade_goods_size = 1.5
 		}
 		area_modifier = {		
-		}
-		region_modifier = {
-			local_development_cost = -0.15
 		}
 		country_modifiers = {
 			production_efficiency = 0.1
@@ -672,7 +650,6 @@ orlghelovar_great_waterfall = {
 		province_modifiers = {
 			local_defensiveness = 0.33
 			local_hostile_attrition = 1
-			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = {		
 		}
@@ -680,24 +657,6 @@ orlghelovar_great_waterfall = {
 			stability_cost_modifier = -0.2
 			dip_advisor_cost = -0.2
 			monarch_diplomatic_power = 1
-		}
-		on_upgraded = {
-			owner = {
-				random_list = {
-					50 = {
-						add_dip_power = 150
-					}
-					30 = {
-						change_ruler_stat = {
-							stat = dip
-							amount = 2
-						}
-					}
-					20 = {
-						add_dip_tech = 1
-					}
-				}
-			}
 		}
 	}
 }

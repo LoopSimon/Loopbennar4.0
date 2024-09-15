@@ -2260,6 +2260,45 @@ has_multiple_manufactory_trigger = {
 	}
 }
 
+has_free_manufactory_slot_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_free_manufactory_slot_trigger
+		num_free_building_slots = 1
+		if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 8 } }
+			num_of_times_expanded_infrastructure = 8
+		}
+		else_if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 7 } }
+			num_of_times_expanded_infrastructure = 7
+		}
+		else_if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 6 } }
+			num_of_times_expanded_infrastructure = 6
+		}
+		else_if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 5 } }
+			num_of_times_expanded_infrastructure = 5
+		}
+		else_if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 4 } }
+			num_of_times_expanded_infrastructure = 4
+		}
+		else_if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 3 } }
+			num_of_times_expanded_infrastructure = 3
+		}
+		else_if = {
+			limit = { has_multiple_manufactory_trigger = { VAL = 2 } }
+			num_of_times_expanded_infrastructure = 2
+		}
+		else_if = {
+			limit = {  has_manufactory_trigger = yes  }
+			num_of_times_expanded_infrastructure = 1
+		}
+	}
+}
+
 #################################
 #######Governments and Tags######
 #################################
@@ -2290,14 +2329,6 @@ has_adventurer_reform = {
 has_claims_restricted = {
 	has_reform = adventurer_reform
 }
-
-is_technocracy = {
-	OR = {
-		has_reform = technocracy_republic_reform
-		has_country_flag = is_technocratic_gov
-	}
-}
-
 
 is_adventurer = {
 	custom_trigger_tooltip = {
@@ -2404,6 +2435,10 @@ is_monstrous_horde = {
 		#has_reform = great_ogre_horde
 		AND = {
 			has_reform = harpy_matriarchy_reform
+			government = tribal
+		}
+		AND = {
+			has_reform = harpy_matriarchy_ayarallen_early_gov_mechanic_reform
 			government = tribal
 		}
 	}
@@ -2527,7 +2562,20 @@ is_cannorian_in_ynn = {
 		#Doesn't include initial adventurer tags, only the formables + aelantir spawnables
 	}
 }
-
+is_cannorian_adventurer_in_ynn = {
+	OR = {
+		tag = H44 #Shining Circle
+		tag = H46 #Istralorean Crusaders
+		tag = H48 #Menibor Free Company
+		tag = H52 #House of Pelodir
+		tag = H54 #Tipney Pioneers
+		tag = H56 #Havoral Band
+		tag = H58 #Chipped Tooth Company
+		tag = H60 #Plumwall Expedition
+		tag = H64 #Bardswood Band
+		#Only the pre-formable ones
+	}
+}
 
 
 
@@ -2583,6 +2631,10 @@ is_fey_attuned_culture = {
 			culture = emerald_orc
 			culture_group = eordan_ruinborn_elf
 			culture = avil_centaur
+			AND = {
+				culture = forest_goblin
+				religion = pactseeker
+			}
 		}
 	}
 }
@@ -2601,6 +2653,26 @@ is_yanified_culture = {
 	}
 }
 
+can_yanify_culture = {
+	OR = {
+		culture_is_human = yes
+		AND = { 
+			culture_is_half_orcish = yes
+			owner = { has_country_flag = orc_yanification_enabled_flag }
+		}
+		AND = { 
+			culture_is_orcish = yes
+			owner = { has_country_flag = orc_yanification_enabled_flag }
+		}
+		AND = {
+			culture_is_hobgoblin = yes
+			owner = { has_country_flag = hobgoblin_yanification_enabled_flag }
+		}
+		culture_is_harimari = yes
+		culture_is_elven = yes
+		culture_is_centaur = yes
+	}
+}
 
 has_crusader_religion = {
 	OR = {
@@ -2796,6 +2868,18 @@ goblinic_shamanism_trigger = {
 				}
 			}
 		}
+		AND = {
+			OR = {
+				has_unlocked_cult = muta_kroozpauz_cult
+				dwarovar_goblin_culture = yes
+			}
+			ROOT = {
+				NOT = {
+					has_unlocked_cult = muta_kroozpauz_cult
+					dwarovar_goblin_culture = yes
+				}
+			}
+		}
 	}
 }
 
@@ -2806,6 +2890,7 @@ religion_has_burials = {
 		religion = ynn_river_worship
 		religion = ynn_river_reformed
 		religion = feast_of_the_gods
+		religion = reformed_feast_of_the_gods
 		religion = xhazobkult
 	}
 }
@@ -3076,6 +3161,22 @@ has_professionalism_equivalent = {
 	}
 }
 
+has_production_manufactory_or_gold_trigger = { #Province Scope
+	custom_trigger_tooltip = {
+		tooltip = has_production_manufactory_trigger_tooltip
+		OR = {
+			has_building = wharf
+			has_building = weapons
+			has_building = textile
+			has_building = tradecompany
+			has_building = farm_estate
+			has_building = mills
+			has_building = furnace
+			has_building = plantations
+			trade_goods = gold
+		}
+	}
+}
 
 eoa_is_dismantled = {
 	custom_trigger_tooltip = {
@@ -3683,15 +3784,19 @@ special_life_extension = {
 		always = yes
 	}
 	else_if = {
-		limit = { has_country_modifier = gemradcurt_icey_determination NOT = { ruler_age = 100 } }
+		limit = { has_ruler_flag = shadow_pact_time_effect }
 		always = yes
 	}
 	else_if = {
-		limit = { has_ruler_modifier = chaingrasper_exceptional_willpower NOT = { ruler_age = 100 } }
+		limit = { has_country_modifier = exceptional_willpower_75 NOT = { ruler_age = 75 } }
 		always = yes
 	}
 	else_if = {
-		limit = { has_country_modifier = esthil_undying_pursuit NOT = { ruler_age = 100 } }
+		limit = { has_ruler_modifier = exceptional_willpower_100 NOT = { ruler_age = 100 } }
+		always = yes
+	}
+	else_if = {
+		limit = { has_country_modifier = exceptional_willpower_150 NOT = { ruler_age = 150 } }
 		always = yes
 	}
 	else_if = {
@@ -3746,6 +3851,17 @@ has_100_opinion_improved_relation = {
 			who = $target$
 			modifier = improved_relation
 			value = 100
+		}
+	}
+}
+
+has_95_opinion_improved_relation = {
+	custom_trigger_tooltip = {
+		tooltip = 95_improved_relation_trigger_tt
+		has_opinion_modifier = {
+			who = $target$
+			modifier = improved_relation
+			value = 95
 		}
 	}
 }
@@ -3845,6 +3961,148 @@ has_10_opinion_sent_gift = {
 			who = $target$
 			modifier = sent_gift
 			value = 10
+		}
+	}
+}
+
+has_15_opinion_getting_subsidies = {
+	custom_trigger_tooltip = {
+		tooltip = 15_getting_subsidies_trigger_tt
+		has_opinion_modifier = {
+			who = $target$
+			modifier = getting_subsidies
+			value = 14 #Yes, It has to work like this
+		}
+	}
+}
+
+has_10_opinion_getting_subsidies = {
+	custom_trigger_tooltip = {
+		tooltip = 10_getting_subsidies_trigger_tt
+		has_opinion_modifier = {
+			who = $target$
+			modifier = getting_subsidies
+			value = 10
+		}
+	}
+}
+
+has_5_opinion_getting_subsidies = {
+	custom_trigger_tooltip = {
+		tooltip = 5_getting_subsidies_trigger_tt
+		has_opinion_modifier = {
+			who = $target$
+			modifier = getting_subsidies
+			value = 5
+		}
+	}
+}
+
+#Aelantir Cliff Passages
+arbeloch_ascensor_constructed = {
+	custom_trigger_tooltip = {
+		tooltip = arbeloch_ascensor_constructed_tt
+		OR = {
+			1153 = {
+				has_great_project = {
+					type = arbeloch_ascensor
+				}
+			}
+			1128 = {
+				has_great_project = {
+					type = arbeloch_ascensor
+				}
+			}
+		}
+	}
+}
+
+arca_venaan_constructed = {
+	custom_trigger_tooltip = {
+		tooltip = arca_venaan_constructed_tt
+		OR = {
+			1031 = {
+				has_great_project = {
+					type = arca_venaan		
+				}
+			}
+			2757 = {
+				has_great_project = {
+					type = arca_venaan		
+				}
+			}
+		}
+	}
+}
+
+arca_noruin_constructed = {
+	custom_trigger_tooltip = {
+		tooltip = arca_noruin_constructed_tt
+		OR = {
+			1901 = {
+				has_great_project = {
+					type = arca_noruin		
+				}
+			}
+			1835 = {
+				has_great_project = {
+					type = arca_noruin		
+				}
+			}
+		}
+	}
+}
+
+walkway_of_thorns_constructed = {
+	custom_trigger_tooltip = {
+		tooltip =  walkway_of_thorns_constructed_tt
+		OR = {
+			1882 = {
+				has_great_project = {
+					type = walkway_of_thorns		
+				}
+			}
+			1042 = {
+				has_great_project = {
+					type = walkway_of_thorns
+				}
+			}
+		}
+	}
+}
+
+spoorland_lift_constructed = {
+	custom_trigger_tooltip = {
+		tooltip = spoorland_lift_constructed_tt
+		OR = {
+			1949 = {
+				has_great_project = {
+					type = spoorland_lift		
+				}
+			}
+			1810 = {
+				has_great_project = {
+					type = spoorland_lift
+				}	
+			}
+		}
+	}
+}
+
+redrushes_climb_constructed = {
+	custom_trigger_tooltip = {
+		tooltip = redrushes_climb_constructed_tt
+		OR = {
+			1876 = {
+				has_great_project = {
+					type = redrushes_climb		
+				}
+			}
+			2095 = {
+				has_great_project = {
+					type = redrushes_climb
+				}			
+			}
 		}
 	}
 }

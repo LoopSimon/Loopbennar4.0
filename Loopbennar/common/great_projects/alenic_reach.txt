@@ -265,7 +265,6 @@ celmaldor_icewind_palace_of_commerce = {
 		}
 		province_modifiers = {
 			local_development_cost = -0.25
-			province_trade_power_value = 10
 			allowed_num_of_buildings = 1
 		}
 		area_modifier = {

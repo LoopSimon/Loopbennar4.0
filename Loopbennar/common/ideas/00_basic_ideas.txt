@@ -591,16 +591,18 @@ diplomatic_ideas = {
 	category = DIP
 	bonus = {
 		reduced_stab_impacts = yes
+		free_policy = 1
 	}
 	
 	grand_banquets = {
 		diplomats = 1
 	}
 	foreign_embassies = { #1.35
-		dip_advisor_cost = -0.25
+		advisor_cost = -0.1
 	}
 	cabinet = {
 		diplomatic_upkeep = 1
+		all_estate_loyalty_equilibrium = 0.1
 	}
 	benign_diplomats = {
 		improve_relation_modifier = 0.25
@@ -1096,16 +1098,30 @@ exploration_ideas = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.01
-			NOT = { has_institution = renaissance }
-			NOT = { tag = A01 }
-			NOT = { tag = A02 }
-			NOT = { tag = A09 }
-			NOT = { tag = A21 }
-		}
+		#modifier = {
+		#	factor = 0.01
+		#	NOT = {
+		#		AND = {
+		#			has_global_flag = delete_cannor_region 
+		#			NOT = { has_global_flag = delete_north_aelantir_region }
+		#			NOT = { has_global_flag = delete_south_aelantir_region }
+		#		}
+		#	}
+		#	NOT = { has_institution = renaissance }
+		#	NOT = { tag = A01 }
+		#	NOT = { tag = A02 }
+		#	NOT = { tag = A09 }
+		#	NOT = { tag = A21 }
+		#}
 		modifier = {
 			factor = 0.1
+			NOT = {
+				AND = {
+					has_global_flag = delete_cannor_region 
+					NOT = { has_global_flag = delete_north_aelantir_region }
+					NOT = { has_global_flag = delete_south_aelantir_region }
+				}
+			}
 			capital_scope = {
 				NOT = {
 					OR = {
@@ -1124,19 +1140,26 @@ exploration_ideas = {
 			factor = 0.5
 			culture_group = kobold
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { is_year = 1490 }
-			capital_scope = {
-				NOT = {
-					OR = {
-						region = lencenor_region
-						region = dragon_coast_region
-						region = akasik_region
-					}
-				}
-			}
-		}
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = {
+		#		AND = {
+		#			has_global_flag = delete_cannor_region 
+		#			NOT = { has_global_flag = delete_north_aelantir_region }
+		#			NOT = { has_global_flag = delete_south_aelantir_region }
+		#		}
+		#	}
+		#	NOT = { is_year = 1490 }
+		#	capital_scope = {
+		#		NOT = {
+		#			OR = {
+		#				region = lencenor_region
+		#				region = dragon_coast_region
+		#				region = akasik_region
+		#			}
+		#		}
+		#	}
+		#}
 		modifier = {
 			factor = 2.0
 			num_of_ports = 5
@@ -1165,27 +1188,27 @@ exploration_ideas = {
 		modifier = {
 			factor = 1000
 			OR = {
-				tag = A01 #Lorent
-				tag = A02 #Deranne
 				tag = A21 #Venail
+				tag = A33 #Verne
+				tag = A11 #Pearlsedge
 			}
 		}
 		modifier = {
-			factor = 3
+			factor = 10
 			OR = {
-				tag = A33 #Verne
-				tag = A11 #Pearlsedge
+				tag = A01 #Lorent
+				tag = A02 #Deranne
 				tag = A47 #Eborthil
 				tag = A29 #Busilar
-				tag = A09 #Sorncost (if they somehow survive)
+				tag = A79 #Gnomish Hierarchy (if they somehow form)
 			}
 		}
 		modifier = {
 			factor = 1.5
 			OR = {
-				tag = A13 #Gawed (if they somehow get ports soon enough)
-				tag = A79 #Gnomish Hierarchy (if they somehow form)
 				tag = Z08 #Bjarnrik (if they somehow are successful)
+				tag = A31 #Moonhaven
+				tag = A05 #Reveria
 			}
 		}
 	}
@@ -1336,10 +1359,10 @@ quality_ideas = {
 
 	ai_will_do = {
 		factor = 3.5
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_strong_mil_national_ideas = yes 
+		#}
 		modifier = { 
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
@@ -1401,7 +1424,7 @@ quantity_ideas = {
 	category = MIL
 
 	bonus = {
-		land_forcelimit_modifier  = 0.33 #1.35
+		land_forcelimit_modifier  = 0.2 #1.35
 		num_of_pronoiars = 1
 	}
 	mass_army = {
@@ -1432,10 +1455,10 @@ quantity_ideas = {
 
 	ai_will_do = {
 		factor = 3.5
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_strong_mil_national_ideas = yes 
+		#}
 		modifier = { 
 			factor = 0.75
 			NOT = { monthly_mil = 8 }
@@ -1630,6 +1653,7 @@ expansion_ideas = {
 				technology_group = tech_elven
 				technology_group = tech_bulwari
 				technology_group = tech_triunic
+				technology_group = tech_kheionai
 			}
 		}
 	}
@@ -1648,23 +1672,26 @@ administrative_ideas = {
 		adm_advisor_cost = -0.25  #1.35
 	}
 	local_rule = {
-		advisor_pool = 1
+		all_estate_loyalty_equilibrium = 0.05
 		num_of_pronoiars = 1
 	}
 	adaptability = {
 		core_creation = -0.25
 	}
 	cultural_regulations = { #1.35
-		promote_culture_cost = -0.3
+		num_accepted_cultures = 1
 	}
 	stable_government = { #1.35
-		stability_cost_modifier = -0.25 
+		stability_cost_modifier = -0.2
+		state_maintenance_modifier = -0.1
 	}
 	centralization = { #1.35
 		global_autonomy = -0.05
+		min_autonomy_in_territories = -0.05
+		
 	}
 	civil_servants = {
-		adm_tech_cost_modifier = -0.1
+		ae_impact = -0.15
 		#Anbennar
 		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
 		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
@@ -1672,10 +1699,10 @@ administrative_ideas = {
 
 	ai_will_do = {
 		factor = 0.65
-		modifier = {
-			factor = 2
-			has_strong_mil_national_ideas = yes 
-		}
+		#modifier = {
+		#	factor = 2
+		#	has_strong_mil_national_ideas = yes 
+		#}
 		modifier = { 
 			factor = 0.75
 			NOT = { monthly_adm = 8 }
@@ -1729,19 +1756,21 @@ humanist_ideas = {
 	}
 	indirect_rule = {
 		years_of_nationalism = -10
+		core_creation = -0.15
 	}
 	ecumenism = { #1.35
 		tolerance_heretic = 2
 	}
 	cultural_ties = {
 		num_accepted_cultures = 2
+		advisor_cost = -0.1
 	}
 	humanist_tolerance = { #1.35
 		tolerance_heathen = 2
 		religious_unity = 0.2
 	}
 	benevolence = {
-		improve_relation_modifier = 0.3
+		stability_cost_modifier = -0.2
 	}
 	tolerance_idea = { #1.35
 		tolerance_of_heretics_capacity = 1 
@@ -1851,39 +1880,31 @@ naval_ideas = {
 	}
 
 	bonus = {
-		global_naval_barrage_cost = -1
-		disengagement_chance = 0.15
+		free_leader_pool = 1
 	}
 
 	boarding_parties = {
-		leader_naval_shock = 1
-		landing_penalty = -1 #1.35
+		discipline = 0.035
 	}
 	improved_rams = {
-		galley_power = 0.25
+		leader_land_fire = 1
 	}
 	naval_cadets = {
-		leader_naval_fire = 1
-		sunk_ship_morale_hit_recieved = -0.33
+		leader_land_manuever = 1
+		leader_naval_manuever = 1
 	}
 	naval_glory = {
-		navy_tradition = 1
-		siege_blockade_progress = 1
+		leader_siege = 1
 	}
 	press_gangs = {
-		sailors_recovery_speed = 0.25
-		allowed_marine_fraction = 0.25
+		leader_naval_fire = 1
+		leader_naval_shock = 1
 	}
 	oak_forests_for_ships = {
-		heavy_ship_power = 0.20
-		ship_durability = 0.1
+		yearly_army_professionalism = 0.002
 	}
 	superior_seamanship = {
-		naval_morale = 0.1
-		global_naval_engagement_modifier = 0.1
-		#Anbennar
-		effect = { increase_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
-		removed_effect = { decrease_legitimacy_equivalent_absolutism_from_idea_groups_mod = yes }
+		army_tradition_decay = -0.025
 	}
 
 	ai_will_do = {
@@ -1928,20 +1949,19 @@ court_ideas = { #1.35
 		horde_unity = 0.5
 		meritocracy = 0.25 
 		imperial_mandate = 0.1
-		imperial_authority = 0.05
+		imperial_authority = 0.05 
 	}
 	
 	long_echo = {
-		power_projection_from_insults = 1
-		diplomatic_reputation = 1
+		global_unrest = -2
+		no_stability_loss_on_monarch_death = yes  
 	}
 	recognize_hierarchy = {
 		all_estate_loyalty_equilibrium = 0.1
 		loyalty_change_on_revoked = 0.05
 	}
 	welcoming_ceremonies = {
-		prestige = 1 
-		monthly_persian_influence = 0.1
+		global_prosperity_growth = 0.25
 	}
 	tranquil_coordination = {
 		reform_progress_growth = 0.2
@@ -1997,7 +2017,7 @@ mercenary_ideas = { #1.35
 		mil_advisor_cost = -0.25
 	}
 	expanded_contracts = {
-		merc_maintenance_modifier = -0.10
+		merc_maintenance_modifier = -0.1
 	}
 	nation_of_war = {
 		mil_tech_cost_modifier = -0.1

@@ -20,7 +20,7 @@ country_event = {
 	mean_time_to_happen = { years = 1 }
 	
 	trigger = {
-		is_year = 1450
+		is_year = 1800
 		owns = 526 #ovdal tungr
 		NOT = { has_global_flag = delete_west_serpentspine_region }
 	}
@@ -29,7 +29,7 @@ country_event = {
 		hidden_effect = {
 			random_province = {
 				limit = {
-					region = serpentreach_region
+					area = shazstundihr_area
 					is_empty = yes
 					has_empty_adjacent_province = yes
 					OR = {
@@ -187,6 +187,7 @@ country_event = {
 						area = anvils_horn_area
 						area = krakdhum_area
 						area = dead_end_tunnel_area
+						province_group = hold_province
 					}
 					is_empty = yes
 					
@@ -423,7 +424,7 @@ country_event = {
 	mean_time_to_happen = { years = 1 }
 	
 	trigger = {
-		is_year = 1460
+		is_year = 1800
 		owns = 4397
 		NOT = { has_global_flag = delete_east_serpentspine_region }
 	}
@@ -432,7 +433,7 @@ country_event = {
 		hidden_effect = {
 			random_province = {
 				limit = {
-					region = tree_of_stone_region
+					area = dwarovrod_45_48_area
 					is_empty = yes
 					has_empty_adjacent_province = yes
 				}
@@ -805,7 +806,7 @@ country_event = {
 			type = spymaster
 			skill = 1
 			name = "Borian Barrows"
-			discount = yes
+			cost_multiplier = 0.25
 			culture = redfoot_halfling
 			religion = regent_court
 		}

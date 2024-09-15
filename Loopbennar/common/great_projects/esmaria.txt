@@ -150,10 +150,6 @@ giberd_academy_of_engineering = {
 			add_base_production = 4
 			owner = {
 				change_innovativeness = 3
-				country_event = { 
-					id = cannorian_monuments_giberd_artificers.1
-					days = 1
-				}
 			}
 			center_of_trade = 1
 			add_building = university
@@ -247,9 +243,6 @@ telgeir_vanbury_steel_foundry = {
 		}
 		area_modifier = {
 		}
-		country_modifiers = {
-			infantry_fire = 0.05
-		}
 		on_upgraded = {
 			add_base_production = 2
 		}
@@ -268,8 +261,7 @@ telgeir_vanbury_steel_foundry = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			infantry_fire = 0.10
-			fire_damage_received = -0.025
+			infantry_fire = 0.05
 		}
 		on_upgraded = {
 			add_base_production = 2
@@ -290,8 +282,7 @@ telgeir_vanbury_steel_foundry = {
 		area_modifier = {
 		}
 		country_modifiers = {
-			infantry_fire = 0.15
-			fire_damage_received = -0.05
+			infantry_fire = 0.1
 		}
 		on_upgraded = {
 			center_of_trade = 1
@@ -309,7 +300,7 @@ temple_of_ryala = {
 	build_cost = 0
 	can_be_moved = no
 	move_days_per_unit_distance = 1
-	starting_tier = 1
+	starting_tier = 2
 	type = monument
 	build_trigger = {	
 	}
@@ -582,21 +573,6 @@ konwell_the_imperial_archives = {
 			adm_advisor_cost = -0.25
 			adm_tech_cost_modifier = -0.1
 			idea_cost = -0.05
-		}
-		on_upgraded = {
-			owner = {
-				random_list = {
-					65 = {
-						add_adm_power = 200
-					}
-					20 = {
-						increase_ruler_adm_effect = 1
-						}
-					15 = {
-						add_adm_tech = 1
-					}
-				}
-			}
 		}
 	}
 }

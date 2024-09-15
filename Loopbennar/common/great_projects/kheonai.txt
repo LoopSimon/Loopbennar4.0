@@ -22,6 +22,7 @@ warded_city_deg = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -31,6 +32,7 @@ warded_city_deg = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -144,6 +146,7 @@ warded_city_orm = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -153,6 +156,7 @@ warded_city_orm = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -263,6 +267,7 @@ warded_city_khe = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -272,6 +277,7 @@ warded_city_khe = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -329,7 +335,6 @@ warded_city_khe = {
 		}
 		country_modifiers = {
 			production_efficiency = 0.1
-			candidate_random_bonus = 1
 			republican_tradition = 0.25
 		}
 		on_upgraded = {
@@ -351,7 +356,7 @@ warded_city_khe = {
 		}
 		country_modifiers = {
 			production_efficiency = 0.1
-			candidate_random_bonus = 2
+			candidate_random_bonus = 1
 			republican_tradition = 0.5
 		}
 		on_upgraded = {
@@ -382,6 +387,7 @@ warded_city_lok = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -391,6 +397,7 @@ warded_city_lok = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -502,6 +509,7 @@ warded_city_okt = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -511,6 +519,7 @@ warded_city_okt = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -620,6 +629,7 @@ warded_city_arp = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
@@ -629,6 +639,7 @@ warded_city_arp = {
 			OR = {
 				culture_group = kheionai_ruinborn_elf
 				culture_group = elven
+				culture_group = eltibhari_ruinborn_elf
 			}
 		}
 	}	
